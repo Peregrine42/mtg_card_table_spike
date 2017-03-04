@@ -1,0 +1,50 @@
+@import "bootstrap-sprockets";
+@import "bootswatch/slate/variables";
+@import "bootstrap";
+
+$tr_height: 80px;
+$board_radius: 10px;
+
+.card {
+  background-image: url("/images/back.jpg");
+  width: 40px;
+  height: 40px;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+table { 
+    border-collapse: separate;
+    border-left: 0;
+    border-radius: $board_radius;
+    border-spacing: 0px;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    line-height: $tr_height;
+    min-height: $tr_height;
+    height: $tr_height;
+}
+td {
+    padding: 5px 4px 6px 4px; 
+    text-align: center;
+    vertical-align: center;
+    border: 5px;
+}
+tr:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: $board_radius 0 0 0;
+}
+tr:last-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 $board_radius;
+}
